@@ -3,12 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Про нас - Електронний журнал подорожей</title>
-  <link rel="stylesheet" href=css/style.css>
+  <title>Про нас - Luxury Travel Agency</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 40px 0;
+    }
+    .section img {
+      width: 45%;
+      border-radius: 10px;
+    }
+    .section .text {
+      width: 50%;
+      padding: 20px;
+    }
+    .reverse {
+      flex-direction: row-reverse;
+    }
+  </style>
 </head>
 <body>
 <header>
-  <h1>Travel agency by Yuliya</h1>
+  <div class="header-container">
+    <img src="pictures/logo.png" alt="Логотип">
+    <h1>Luxury Travel Agency</h1>
+  </div>
   <nav>
     <ul>
       <li><a href="index.html">Путівки</a></li>
@@ -19,18 +41,50 @@
 </header>
 
 <main>
-  <section>
-    <h2>Про нас</h2>
-    <p>Ми - команда мандрівників, які діляться своїми пригодами по всьому світу.</p>
-    <figure>
-      <img src="pictures/team.jpg" alt="Наша команда">
-      <figcaption>Наша команда у подорожі</figcaption>
-    </figure>
+  <section class="section">
+
+    </div>
+    <img src="pictures/team.png" alt="Офіс нашої компанії">
+    <div class="text">
+      <h2>Про нашу компанію</h2>
+      <p>Luxury Travel Agency – це команда експертів, які організовують незабутні подорожі преміум-класу.</p>
+  </section>
+
+  <section class="section reverse">
+    <img src="pictures/women.png" alt="Фото засновниці">
+    <div class="text">
+      <h2>Наша засновниця</h2>
+      <p>Юлія – засновниця агенції, яка має понад 15 років досвіду у сфері люкс-подорожей.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="text">
+      <h2>Менеджер подорожей року</h2>
+      <p>Олександр – відповідає за ексклюзивні маршрути та VIP-клієнтів.</p>
+    </div>
+    <img src="pictures/employee1.jpg" alt="Фото Олександра">
+  </section>
+
+  <section class="section reverse">
+    <div class="text">
+      <h2>Консультант з розкішних готелів</h2>
+      <p>Анна – спеціалістка з вибору найкращих готелів світу для наших клієнтів.</p>
+    </div>
+    <img src="pictures/anna.webp" alt="Фото Анни">
+  </section>
+
+  <section class="section">
+    <div class="text">
+      <h2>Спеціаліст з ексклюзивних заходів</h2>
+      <p>Максим – організовує унікальні заходи та приватні події.</p>
+    </div>
+    <img src="pictures/employee3.jpg" alt="Фото Максима">
   </section>
 </main>
 
 <footer>
-  <p>&copy; 2025 Електронний журнал подорожей | Всі права захищені</p>
+  <p>&copy; 2025 Luxury Travel Agency | Всі права захищені</p>
 </footer>
 </body>
 </html>
