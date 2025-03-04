@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="uk" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Електронний журнал подорожей</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Yuliya Travel - подорожі</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header>
-  <h1>Електронний журнал подорожей</h1>
+  <div class="header-container">
+    <img src="pictures/logo.png" alt="">
+    <h1>Travel agency by Yuliya</h1>
+  </div>
   <nav>
     <ul>
-      <li><a href="index.html">Домашня</a></li>
+      <li><a href="index.html">Путівки</a></li>
       <li><a href="about.html">Про нас</a></li>
-      <li><a href="services.html">Послуги</a></li>
-      <li><a href="portfolio.html">Портфоліо</a></li>
       <li><a href="contact.html">Контакти</a></li>
     </ul>
   </nav>
@@ -22,17 +23,35 @@
 
 <main>
   <section>
-    <h2>Ласкаво просимо до нашого журналу подорожей!</h2>
-    <p>Відкривайте нові місця, читайте цікаві історії та діліться власними пригодами.</p>
-    <figure>
+    <h2>Відкривайте нові місця та насолоджуйтесь подорожами разом із нами!</h2>
+  </section>
 
-      <figcaption>Незабутні моменти з наших подорожей</figcaption>
-    </figure>
+  <section class="tours">
+
+    <div class="tour-card">
+      <a href="det_maldives.html">
+        <img src="pictures/maldives.jpg" alt="Мальдіви">
+      </a>
+      <div class="tour-info">
+        <h3>Мальдіви</h3>
+        <p>Райські пляжі та розкішний відпочинок</p>
+      </div>
+    </div>
+
+    <div class="tour-card">
+      <a href="det_paris.html">
+        <img src="pictures/paris.jpg" alt="Париж">
+      </a>
+      <div class="tour-info">
+        <h3>Париж</h3>
+        <p>Романтична столиця світу</p>
+      </div>
+    </div>
   </section>
 </main>
 
 <footer>
-  <p>&copy; 2025 Електронний журнал подорожей | Всі права захищені</p>
+  <p>&copy; 2025 Туристичне агентство | Всі права захищені</p>
 </footer>
 </body>
 </html>

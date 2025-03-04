@@ -1,0 +1,138 @@
+body {
+  font-family: 'Monotype Corsiva', sans-serif;
+  font-style: unset;
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
+  color: #fff;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.header-container img {
+  height: 100px;
+}
+
+.header-container h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+
+header {
+  background: linear-gradient(90deg, #111, #222);
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+header h1 {
+  font-size: 50px;
+  text-transform: unset;
+  letter-spacing: 2px;
+}
+
+/* Навігація */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #B639FAFF;
+  font-family: 'Impact', sans-serif;
+  font-size: 25px;
+  padding: 10px 15px;
+  transition: all 0.3s;
+}
+
+nav ul li a:hover {
+  background: #B639FAFF;
+  color: #000;
+  border-radius: 5px;
+}
+
+/* Головний блок */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+main h2 {
+  font-size: 30px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+main p {
+  font-size: 1.2em;
+  max-width: 800px;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* Секція турів */
+.tours {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tour-card {
+  width: calc(50% - 20px); /* Дві картки в ряд */
+  background: #222;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.tour-card img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.tour-card img:hover {
+  transform: scale(1.05);
+}
+
+.tour-info {
+  padding: 10px 0;
+}
+
+.tour-info h3 {
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+
+.tour-info p {
+  font-size: 1em;
+  opacity: 0.8;
+}
+
+/* Футер */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
