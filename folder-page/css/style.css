@@ -136,3 +136,21 @@ footer {
   font-size: 0.9em;
   opacity: 0.8;
 }
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 0;
+}
+.section img {
+  width: 36%;
+  border-radius: 10px;
+}
+.section .text {
+  width: 50%;
+  padding: 20px;
+}
+.reverse {
+  flex-direction: row-reverse;
+}
