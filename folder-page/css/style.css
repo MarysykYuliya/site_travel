@@ -6,6 +6,7 @@ body {
   background-color: #0a0a0a;
   color: #fff;
 }
+
 .header-container {
   display: flex;
   align-items: center;
@@ -21,21 +22,6 @@ body {
   font-size: 24px;
 }
 
-
-header {
-  background: linear-gradient(90deg, #111, #222);
-  padding: 20px 0;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
-}
-
-header h1 {
-  font-size: 50px;
-  text-transform: unset;
-  letter-spacing: 2px;
-}
-
-/* Навігація */
 nav ul {
   list-style: none;
   padding: 0;
@@ -63,13 +49,14 @@ nav ul li a:hover {
   border-radius: 5px;
 }
 
-/* Головний блок */
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 30px;
   padding: 50px 20px;
-  text-align: center;
+  text-align: left;
 }
 
 main h2 {
@@ -85,26 +72,33 @@ main p {
   opacity: 0.8;
 }
 
-/* Секція турів */
-.tours {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.tour-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
+  padding: 20px;
+}
+
+.tours {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+  gap: 20px;
+  justify-content: center;
 }
 
 .tour-card {
-  width: calc(50% - 20px); /* Дві картки в ряд */
-  background: #222;
-  padding: 15px;
-  border-radius: 10px;
-  text-align: left;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .tour-card img {
   width: 100%;
-  border-radius: 10px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
   cursor: pointer;
   transition: transform 0.3s;
 }
@@ -114,50 +108,50 @@ main p {
 }
 
 .tour-info {
-  padding: 10px 0;
+  font-size: 0.9em;
+  text-align: left;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  background: #222;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
 }
 
 .tour-info h3 {
-  margin: 10px 0;
   font-size: 1.5em;
+  margin: 0 0 10px;
+  color: #fff;
 }
 
 .tour-info p {
   font-size: 1em;
-  opacity: 0.8;
-}
-
-@media (max-width: 768px) {
-  .tour-card {
-    width: 100%; /* Одна картка на ряд при малих екранах */
-  }
-}
-
-/* Футер */
-footer {
-  background: #111;
-  text-align: center;
-  padding: 20px;
-  margin-top: 50px;
-  font-size: 0.9em;
-  opacity: 0.8;
+  color: #ccc;
+  margin: 0;
 }
 
 .section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 40px 0;
+  padding: 30px 20px;
+  gap: 30px;
+  flex-wrap: wrap;
 }
+
 .section img {
-  width: 36%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
   border-radius: 10px;
 }
+
 .section .text {
-  width: 50%;
-  padding: 20px;
+  flex: 1;
+  max-width: 600px;
 }
-.reverse {
+
+.section.reverse {
   flex-direction: row-reverse;
 }
 
@@ -213,6 +207,7 @@ button {
   margin-top: 15px;
   padding: 10px;
   background: #B639FAFF;
+  font-family: 'Impact', sans-serif;
   color: black;
   font-size: 18px;
   border: none;
@@ -226,4 +221,203 @@ button {
 button:hover {
   background: #8a29c2;
   color: white;
+}
+
+.photo-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.photo-gallery img {
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-gallery img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.thumbnail {
+  width: 70%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+footer {
+  background: #111;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .header-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .header-left h1 {
+    font-size: 1.2em;
+    margin: 0;
+    white-space: nowrap;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .header-container h1 {
+    text-align: left;
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li a {
+    font-size: 1.1em;
+    white-space: nowrap;
+  }
+
+  main {
+    padding: 20px 10px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tours {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .tour-grid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .tour-info {
+    padding: 10px;
+  }
+
+  .tour-info h3 {
+    font-size: 1.2em;
+  }
+
+  .tour-info p {
+    font-size: 0.95em;
+  }
+
+  .section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section img {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .section .text {
+    width: 100%;
+    padding: 0;
+  }
+
+  .contact-info, .contact-form {
+    width: 95%;
+    padding: 10px;
+  }
+
+  input, textarea, button {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  form {
+    padding: 0;
+  }
+
+  .photo-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo-gallery img {
+    width: 100%;
+    height: auto;
+  }
+
+  footer {
+    padding: 15px 10px;
+    font-size: 0.85em;
+  }
 }

@@ -1,10 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тур до Парижа</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+<script src="script.js"></script>
 <body>
+<header>
+  <div class="header-container">
+    <img src="pictures/logo.png" alt=" ">
+    <h1>Luxury Travel Agency</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Путівки</a></li>
+        <li><a href="about.html">Про нас</a></li>
+        <li><a href="contact.html">Контакти</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
+<main class="paris-page">
+  <img src="pictures/paris.jpg" alt="Париж" class="thumbnail">
+  <section class="tour-info">
+    <h2>Тур до Парижа</h2>
+    <p><strong>Готель:</strong> Hôtel Le Meurice 5*</p>
+    <p><strong>Переліт:</strong> Включений</p>
+    <p><strong>Кількість днів:</strong> 5 ночей, 6 днів</p>
+    <p><strong>Опис туру:</strong> Екскурсії по Парижу: відвідування Ейфелевої вежі, Лувру, Монмартра, а також прогулянки по затишних вуличках та кав'ярнях французької столиці.</p>
+    <form action="contact.html" method="GET">
+      <button type="submit">Замовити</button>
+    </form>
+
+    <div class="photo-gallery">
+      <img src="pictures/paris1.jpg" alt="Париж 1" class="thumbnail">
+      <img src="pictures/paris2.jpg" alt="Париж 2" class="thumbnail">
+    </div>
+  </section>
+
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="fullImage">
+  </div>
+</main>
+
+<footer>
+  <p>
+    <i class="fab fa-instagram"></i>
+    <a href="https://www.instagram.com/whosyuliia" target="_blank">@travel_agency</a> |
+
+    <i class="fab fa-telegram"></i>
+    <a href="https://t.me/llumjw" target="_blank">@Yuliya Travel</a> |
+
+    <i class="fas fa-phone"></i>
+    <a href="tel:+380673859801">+38(067)-385-98-01</a>
+  </p>
+  <p>&copy; 2025 Туристичне агентство | Всі права захищені</p>
+</footer>
 </body>
 </html>
