@@ -1,5 +1,5 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: unset;
   margin: 0;
   padding: 0;
@@ -8,10 +8,21 @@ body {
 }
 
 .header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; /* щоб був поверх усіх елементів */
   display: flex;
   align-items: center;
   gap: 25px;
+  background-color: rgba(0, 0, 0, 0.6); /* напівпрозорий фон */
+  backdrop-filter: blur(10px); /* ефект скла */
+  -webkit-backdrop-filter: blur(10px); /* підтримка Safari */
+  padding: 15px 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+
 
 .header-container img {
   height: 100px;
@@ -56,6 +67,7 @@ main {
   justify-content: center;
   gap: 30px;
   padding: 50px 20px;
+  padding-top: 130px;
   text-align: left;
 }
 
@@ -158,6 +170,7 @@ main p {
 .contact-info, .contact-form {
   max-width: 600px;
   margin: 40px auto;
+  margin-top: 150px;
   padding: 20px;
   background: #222;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
@@ -293,11 +306,16 @@ footer {
 
 @media (max-width: 768px) {
   .header-container {
+    position: static;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background-color: #0a0a0a;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
     flex-wrap: wrap;
+    text-align: center;
   }
 
   .header-left {
@@ -337,11 +355,13 @@ footer {
     margin: 0;
     list-style: none;
     flex-wrap: wrap;
+    align-items: center;
   }
 
   nav ul li {
     margin: 0;
     padding: 0;
+    margin-bottom: 10px;
   }
 
   nav ul li a {
