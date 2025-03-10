@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.style.display = "none";
   });
 
-  // Закриття модального вікна при кліку за його межами
   modal.addEventListener("click", function (e) {
     if (e.target === modal) {
       modal.style.display = "none";

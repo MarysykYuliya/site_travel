@@ -7,20 +7,29 @@
   <title>Yuliya Travel - подорожі</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+<script>
+  function toggleMenu() {
+    document.querySelector("nav ul").classList.toggle("active");
+  }
+</script>
 <body>
 <header>
   <div class="header-container">
-    <img src="pictures/logo.png" alt=" ">
+    <img src="pictures/logo.png" alt="Logo">
     <h1>Luxury Travel Agency</h1>
-  <nav>
-    <ul>
-      <li><a href="index.html">Путівки</a></li>
-      <li><a href="about.html">Про нас</a></li>
-      <li><a href="contact.html">Контакти</a></li>
-    </ul>
-  </nav>
+
+    <button class="burger-menu" onclick="toggleMenu()">☰</button>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Путівки</a></li>
+        <li><a href="about.html">Про нас</a></li>
+        <li><a href="contact.html">Контакти</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
+
 
 <main>
   <section class="tours">
