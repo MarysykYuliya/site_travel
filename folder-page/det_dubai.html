@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тур до Дубаю</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<script src="script.js"></script>
+<script>
+  function toggleMenu() {
+    document.querySelector("nav ul").classList.toggle("active");
+  }
+</script>
+<body>
+<header>
+  <div class="header-container">
+    <img src="pictures/logo.png" alt="Logo">
+    <h1>Luxury Travel Agency</h1>
+
+    <button class="burger-menu" onclick="toggleMenu()">☰</button>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Путівки</a></li>
+        <li><a href="about.html">Про нас</a></li>
+        <li><a href="contact.html">Контакти</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="dubai-page">
+  <img src="pictures/dubai.jpg" alt="Дубай" class="thumbnail">
+  <section class="tour-info">
+    <h2>Тур до Дубаю</h2>
+    <p><strong>Готель:</strong> Burj Al Arab Jumeirah 7*</p>
+    <p><strong>Переліт:</strong> Включений</p>
+    <p><strong>Кількість днів:</strong> 6 ночей, 7 днів</p>
+    <p><strong>Опис туру:</strong> Відпочинок в розкішному Дубаї: відвідування найвищого хмарочоса світу Бурдж-Халіфа, шопінг в найбільших торгових центрах та екскурсії по найкращих пляжах.</p>
+    <form action="contact.html" method="GET">
+      <button type="submit">Замовити</button>
+    </form>
+
+    <div class="photo-gallery">
+      <img src="pictures/dubai1.webp" alt="Дубай 1" class="thumbnail">
+      <img src="pictures/dubai2.png" alt="Дубай 2" class="thumbnail">
+    </div>
+  </section>
+
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="fullImage">
+  </div>
+</main>
+
+<footer>
+  <p>
+    <i class="fab fa-instagram"></i>
+    <a href="https://www.instagram.com/whosyuliia" target="_blank">@travel_agency</a> |
+
+    <i class="fab fa-telegram"></i>
+    <a href="https://t.me/llumjw" target="_blank">@Yuliya Travel</a> |
+
+    <i class="fas fa-phone"></i>
+    <a href="tel:+380673859801">+38(067)-385-98-01</a>
+  </p>
+  <p>&copy; 2025 Туристичне агентство | Всі права захищені</p>
+</footer>
+</body>
+</html>

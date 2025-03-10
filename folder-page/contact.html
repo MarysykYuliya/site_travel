@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Про нас - Luxury Travel Agency</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<script>
+  function toggleMenu() {
+    document.querySelector("nav ul").classList.toggle("active");
+  }
+</script>
+<body>
+<header>
+  <div class="header-container">
+    <img src="pictures/logo.png" alt="Logo">
+    <h1>Luxury Travel Agency</h1>
+
+    <button class="burger-menu" onclick="toggleMenu()">☰</button>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Путівки</a></li>
+        <li><a href="about.html">Про нас</a></li>
+        <li><a href="contact.html">Контакти</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="contact-info">
+  <h2>Наші контакти</h2>
+  <p><i class="fab fa-instagram"></i> <strong>Instagram:</strong>
+    <a href="https://www.instagram.com/whosyuliia" target="_blank">@travel_agency</a></p>
+  <p><i class="fab fa-telegram"></i> <strong>Telegram:</strong>
+    <a href="https://t.me/llumjw" target="_blank">@Yuliya Travel</a></p>
+  <p><i class="fas fa-phone"></i> <strong>Номер телефону:</strong>
+    <a href="tel:+380673859801">+38(067)-385-98-01</a></p>
+</section>
+
+<section class="contact-form">
+  <h2>Зв'язатись з нами</h2>
+  <form>
+    <label for="name"></label><input type="text" id="name" name="name" placeholder="Ім'я" required>
+
+    <label for="email"></label><input type="email" id="email" name="email" placeholder="Email" required>
+
+    <label for="message"></label><textarea id="message" name="message" rows="4" placeholder="Ваше повідомлення" required></textarea>
+
+    <button type="submit">Надіслати</button>
+  </form>
+</section>
+
+<footer>
+  <p>
+    <i class="fab fa-instagram"></i>
+    <a href="https://www.instagram.com/whosyuliia" target="_blank">@travel_agency</a> |
+
+    <i class="fab fa-telegram"></i>
+    <a href="https://t.me/llumjw" target="_blank">@Yuliya Travel</a> |
+
+    <i class="fas fa-phone"></i>
+    <a href="tel:+380673859801">+38(067)-385-98-01</a>
+  </p>
+  <p>&copy; 2025 Туристичне агентство | Всі права захищені</p>
+</footer>
+</body>
+</html>
