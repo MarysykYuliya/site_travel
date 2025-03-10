@@ -12,13 +12,13 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999; /* щоб був поверх усіх елементів */
+  z-index: 999;
   display: flex;
   align-items: center;
   gap: 25px;
-  background-color: rgba(0, 0, 0, 0.6); /* напівпрозорий фон */
-  backdrop-filter: blur(10px); /* ефект скла */
-  -webkit-backdrop-filter: blur(10px); /* підтримка Safari */
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 15px 30px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -31,6 +31,9 @@ body {
 .header-container h1 {
   margin: 0;
   font-size: 24px;
+}
+.burger-menu {
+  display: none;
 }
 
 nav ul {
@@ -285,6 +288,10 @@ button:hover {
   cursor: pointer;
 }
 
+textarea{
+  font-family: 'Arial', sans-serif;
+}
+
 .thumbnail {
   width: 70%;
   max-width: 800px;
@@ -296,12 +303,30 @@ button:hover {
 }
 
 footer {
-  background: #111;
-  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  background-color: #2e2d2d;
+  color: #c5c5c5;
   padding: 20px;
-  margin-top: 50px;
-  font-size: 0.9em;
-  opacity: 0.8;
+  text-align: center;
+}
+
+footer a {
+  color: #b639fa;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  color: #7b00ff;
+}
+
+footer i {
+  margin-right: 5px;
+}
+
+footer p {
+  margin: 8px 0;
 }
 
 @media (max-width: 768px) {
@@ -345,13 +370,14 @@ footer {
 
   .burger-menu {
     display: block;
-    float: right;
+    float: left;
     background: none;
     border: none;
     font-size: 24px;
     cursor: pointer;
     color: white;
     padding: 10px;
+
   }
 
 
@@ -415,8 +441,13 @@ footer {
   }
 
   .section {
-    flex-direction: column;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 20px;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 80px;
   }
 
   .section img {
@@ -429,9 +460,21 @@ footer {
     padding: 0;
   }
 
-  .contact-info, .contact-form {
-    width: 95%;
-    padding: 10px;
+  .contact-info,
+  .contact-form {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .contact-form {
+    margin-top: 0;
+    padding-top: 5px;
+  }
+
+  .contact-info {
+    margin-top: 10px;
+    padding-top: 10px;
+    margin-bottom: 10px;
   }
 
   input, textarea, button {

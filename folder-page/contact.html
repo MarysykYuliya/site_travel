@@ -7,11 +7,19 @@
   <title>Про нас - Luxury Travel Agency</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+<script>
+  function toggleMenu() {
+    document.querySelector("nav ul").classList.toggle("active");
+  }
+</script>
 <body>
 <header>
   <div class="header-container">
-    <img src="pictures/logo.png" alt="Luxury Travel Agency Logo">
+    <img src="pictures/logo.png" alt="Logo">
     <h1>Luxury Travel Agency</h1>
+
+    <button class="burger-menu" onclick="toggleMenu()">☰</button>
+
     <nav>
       <ul>
         <li><a href="index.html">Путівки</a></li>
